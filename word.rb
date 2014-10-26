@@ -23,9 +23,13 @@ for i in 0..word.length-2
 
       #overwrite the second element with the initial value of the first element
       word[j] = aux
-
+    elsif word[i].length < word[j].length
+      #if second element length is greater stop the loop
+      break
     end
   end
 end
 
-
+open('output.txt', 'w') do |f|
+  f << word
+end
